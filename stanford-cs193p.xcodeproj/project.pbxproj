@@ -11,6 +11,7 @@
 		F5225BD22C8654D7001CA081 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5225BD12C8654D7001CA081 /* ContentView.swift */; };
 		F5225BD42C8654D8001CA081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5225BD32C8654D8001CA081 /* Assets.xcassets */; };
 		F5225BD72C8654D8001CA081 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5225BD62C8654D8001CA081 /* Preview Assets.xcassets */; };
+		F5225BDE2C8785D8001CA081 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5225BDD2C8785D8001CA081 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		F5225BD12C8654D7001CA081 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F5225BD32C8654D8001CA081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5225BD62C8654D8001CA081 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F5225BDD2C8785D8001CA081 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		F5225BCE2C8654D7001CA081 /* stanford-cs193p */ = {
 			isa = PBXGroup;
 			children = (
+				F5225BDD2C8785D8001CA081 /* CardView.swift */,
 				F5225BCF2C8654D7001CA081 /* stanford_cs193pApp.swift */,
 				F5225BD12C8654D7001CA081 /* ContentView.swift */,
 				F5225BD32C8654D8001CA081 /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5225BD22C8654D7001CA081 /* ContentView.swift in Sources */,
+				F5225BDE2C8785D8001CA081 /* CardView.swift in Sources */,
 				F5225BD02C8654D7001CA081 /* stanford_cs193pApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
