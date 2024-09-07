@@ -9,13 +9,29 @@ import SwiftUI
 
 struct CardView: View {
     let cardBgColor: Color
+    
+    // since we specify the true or false variable knows it's Bool we can remove it
+    // let noBgColor: Bool = true
+    @State var noBgColor = true
+    
     var body: some View {
+        let cardBase = RoundedRectangle(cornerRadius: 25.0)
+        
+        // Views are immutable
         ZStack(alignment: .center) {
-            RoundedRectangle(cornerRadius: 25.0) // this works as the background color
-                .foregroundColor(cardBgColor)
-            RoundedRectangle(cornerRadius: 25.0)
-                .strokeBorder(lineWidth: 5.0)
-            Text("☢️").font(.largeTitle)
+            if noBgColor {
+                cardBase.fill(cardBgColor)
+                cardBase.strokeBorder(lineWidth: 5.0)
+                Text("☢️").font(.largeTitle)
+            } else {
+                cardBase.fill(.white)
+                cardBase.strokeBorder(lineWidth: 5.0)
+            }
+        }
+        .onTapGesture {
+            // both are same
+            // noBgColor = !noBgColor
+            noBgColor.toggle()
         }
     }
 }
