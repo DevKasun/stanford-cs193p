@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct CardView: View {
+    // if variable value has no default we can use 'let'
+    let content: String
     let cardBgColor: Color
-    
     // since we specify the true or false variable knows it's Bool we can remove it
     // let noBgColor: Bool = true
     @State var noBgColor = true
@@ -22,7 +23,7 @@ struct CardView: View {
             if noBgColor {
                 cardBase.fill(cardBgColor)
                 cardBase.strokeBorder(lineWidth: 5.0)
-                Text("☢️").font(.largeTitle)
+                Text(content).font(.largeTitle)
             } else {
                 cardBase.fill(.white)
                 cardBase.strokeBorder(lineWidth: 5.0)
