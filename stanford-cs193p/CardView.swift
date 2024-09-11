@@ -16,7 +16,7 @@ struct CardView: View {
     @State var noBgColor = true
     
     var body: some View {
-        let cardBase = RoundedRectangle(cornerRadius: 25.0)
+        let cardBase = RoundedRectangle(cornerRadius: 16.0)
         
         // Views are immutable
         ZStack(alignment: .center) {
