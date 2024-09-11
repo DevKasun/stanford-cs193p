@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CardView: View {
+struct CardView: View {  
     // if variable value has no default we can use 'let'
     let content: String
     let cardBgColor: Color

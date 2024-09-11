@@ -39,7 +39,9 @@ struct ContentView: View {
     
     var body: some View {
         
-        Cards
+        ScrollView {
+            Cards
+        }
         Spacer()
         CardAdjusters
        
@@ -60,6 +62,7 @@ struct ContentView: View {
         LazyVGrid(columns: [GridItem(), GridItem()]) {
             ForEach(0..<min(count, cardData.count), id: \.self) { index in
                 CardView(content: cardData[index].content, cardBgColor: cardData[index].bgColor, noBgColor: cardData[index].noBgColor)
+                    .aspectRatio(2/3 ,contentMode: .fit)
             }
         }
         .foregroundColor(Color.green)
