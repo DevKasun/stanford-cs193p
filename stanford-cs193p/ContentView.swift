@@ -47,12 +47,13 @@ struct ContentView: View {
        
     }
     
-    func cardCountAdjusters(by offset: Int, symbol: String) -> some View {
+    func cardCountAdjusters(by offset: Int, symbol: String, iconColor: Color) -> some View {
         Button(action: {
             count += offset
         }, label: {
             Image(systemName: symbol)
         })
+        .foregroundColor(iconColor)
         .disabled(
             (offset < 0 && count <= 0) || (offset > 0 && count >= cardData.count)
         )
@@ -82,11 +83,11 @@ struct ContentView: View {
     }
     
     var CardRemover: some View {
-        cardCountAdjusters(by: -1, symbol: "rectangle.stack.fill.badge.minus")
+        cardCountAdjusters(by: -1, symbol: "rectangle.stack.fill.badge.minus", iconColor: .red)
     }
         
     var CardAdder: some View {
-        cardCountAdjusters(by: 1, symbol: "rectangle.stack.fill.badge.plus")
+        cardCountAdjusters(by: 1, symbol: "rectangle.stack.fill.badge.plus", iconColor: .blue)
     }
     
 }
